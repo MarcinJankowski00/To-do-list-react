@@ -1,0 +1,20 @@
+.button {
+    background-color: transparent;
+    border: none;
+    color: teal;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover {
+    color: rgb(0, 169, 169)
+}
+
+.button:active {
+    color: rgb(0, 205, 205)
+}
+
+.button:disabled {
+    color: rgb(174, 174, 174);
+    cursor: default;
+}
