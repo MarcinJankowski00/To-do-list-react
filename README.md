@@ -21,7 +21,7 @@ To hide all marked tasks, press "Ukryj ukończone".
 
 To show all hidden tasks, press "Pokaż ukończone".
 
-### Included technologies and conventions:
+## Included technologies and conventions:
 - JavaScript
 - CSS
 - HTML
