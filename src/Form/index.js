@@ -15,7 +15,8 @@ const Form = ({ addNewTask }) => {
                 value={newTaskContent}
                 className="form__field"
                 placeholder="Co jest do zrobienia?"
-                autofocus id="input"
+                autofocus={true}
+                id="input"
                 onChange={(event) => setNewTaskContent(event.target.value)}
             />
             <button className="form__button">Dodaj zadanie</button>
