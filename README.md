@@ -29,6 +29,7 @@ To show all hidden tasks, press "Pokaż ukończone".
 - NormalizeCSS
 - CamelCase naming convention
 - BEM naming convention
+- React
 
 ## Available Scripts
 
