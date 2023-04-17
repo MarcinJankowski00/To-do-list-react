@@ -7,17 +7,16 @@ import Container from './Container';
 import { useEffect } from 'react';
 
 function App() {
-
   if ((localStorage.getItem("tasks")) === null) {
     localStorage.setItem("tasks", "[]");
   };
-  
+
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
-  
+
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  }); 
+  });
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -27,15 +26,9 @@ function App() {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
-  const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done };
-      }
-
-      return task;
-    }));
-  };
+  const toggleTaskDone = (id) => setTasks((tasks) =>
+    tasks.map((task) => task.id === id ? { ...task, done: !task.done } : task)
+  );
 
   const setAllDone = () => {
     setTasks(tasks => tasks.map(task => ({
