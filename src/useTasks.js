@@ -8,6 +8,7 @@ export const useTasks = () => {
         }
         return JSON.parse(localStorage.getItem("tasks"));
     };
+
     const [tasks, setTasks] = useState(getTasks);
 
     useEffect(() => {
@@ -40,6 +41,7 @@ export const useTasks = () => {
             },
         ]);
     };
+    
     return {
         tasks,
         removeTask,
