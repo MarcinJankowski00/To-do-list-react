@@ -10,7 +10,7 @@ export const Item = styled.li`
     align-items: center;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
-    border-bottom: 2px solid rgb(237, 237, 237);
+    border-bottom: 2px solid ${({ theme }) => theme.color.alto};
     padding: 10px;
 
     ${({ hidden }) => hidden && css`
@@ -27,8 +27,7 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
-    background-color: green;
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     width: 40px;
     height: 40px;
     border: none;
@@ -36,18 +35,18 @@ export const Button = styled.button`
     transition: 0.5s;
 
     ${({ toggleDone }) => toggleDone && css`
-        background-color: green;
-
-        &:hover {
-            background-color: rgb(1, 143, 1);
-        }
+        background-color: ${({ theme }) => theme.color.forestGreen};
     `}
 
     ${({ remove }) => remove && css`
-        background-color: rgb(187, 0, 0);
-
-        &:hover {
-            background-color: rgb(229, 0, 0);
-        }
+        background-color: ${({ theme }) => theme.color.crimson};
     `}
+
+    &:hover {
+        filter: brightness(110%);
+    }
+
+    &:active {
+        filter: brightness(120%);
+    }
 `;

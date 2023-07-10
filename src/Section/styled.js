@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Segment = styled.section`
     margin: 10px 0;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 5px 4px #EAEAEA;
+    background-color: ${({ theme }) => theme.color.white};
+    box-shadow: 0px 0px 5px 4px ${({ theme }) => theme.color.alto};
 `;
 
 export const Header = styled.div`
@@ -11,11 +11,11 @@ export const Header = styled.div`
     grid-template-columns: 1fr auto;
     grid-gap: 10px;
     align-items: center;
-    border-bottom: 2px solid rgb(237, 237, 237);
+    border-bottom: 2px solid ${({ theme }) => theme.color.alto};
     padding: 20px;
     margin: 0;
 
-    @media (max-width: 920px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         grid-template-columns: 1fr;
     }
 `;

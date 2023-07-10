@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    @media (max-width: 920px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 10px
@@ -11,20 +11,20 @@ export const Container = styled.div`
 export const Button = styled.button`
     background-color: transparent;
     border: none;
-    color: teal;
+    color: ${({ theme }) => theme.color.teal};
     cursor: pointer;
     transition: 0.5s;
 
     &:hover {
-        color: rgb(0, 169, 169)
+        filter: brightness(110%);
     }
 
     &:active {
-        color: rgb(0, 205, 205)
+        filter: brightness(120%);
     }
 
     &:disabled {
-        color: rgb(174, 174, 174);
+        color: ${({ theme }) => theme.color.silver};
         cursor: default;
     }
 `;
