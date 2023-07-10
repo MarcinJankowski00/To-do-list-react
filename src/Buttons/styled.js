@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 10px

@@ -15,7 +15,7 @@ export const Header = styled.div`
     padding: 20px;
     margin: 0;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
     }
 `;

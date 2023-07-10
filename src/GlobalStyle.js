@@ -13,11 +13,9 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Rubik', sans-serif;
         font-size: 23px;
         background-color: ${({ theme }) => theme.gallery};
-    }
-  
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-        body {
-        font-size: 18px;
+
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+            font-size: 18px;
         }
     }
 `;

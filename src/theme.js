@@ -10,6 +10,6 @@ export const theme = {
         forestGreen: "#228c22",
     },
     breakpoint: {
-        mobileMax: 920,
+        mobileMax: 767,
     },
 };
