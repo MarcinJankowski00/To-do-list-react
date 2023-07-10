@@ -9,9 +9,6 @@ const Form = ({ addNewTask }) => {
         event.preventDefault();
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
-    };
-
-    const focusInput = () => {
         inputRef.current.focus();
     };
 
@@ -26,7 +23,7 @@ const Form = ({ addNewTask }) => {
                 id="input"
                 onChange={(event) => setNewTaskContent(event.target.value)}
             />
-            <Button onClick={focusInput}>Dodaj zadanie</Button>
+            <Button>Dodaj zadanie</Button>
         </Sheet>
     );
 };
