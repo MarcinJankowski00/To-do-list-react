@@ -1,7 +1,7 @@
 import { Segment, Header, Title, Content } from "./styled";
 
 const Section = ({ title, content, extraElementContent }) => (
-    <Segment className="section">
+    <Segment>
         <Header>
             <Title>
                 {title}
