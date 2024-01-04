@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Rubik', sans-serif;
         font-size: 23px;
-        background-color: ${({ theme }) => theme.gallery};
+        background-color: ${({ theme }) => theme.color.gallery};
 
         @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
             font-size: 18px;
