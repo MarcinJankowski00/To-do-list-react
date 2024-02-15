@@ -3,7 +3,10 @@ import { getTasksFromLocalStorage } from './tasksLocalStorage';
 
 const tasksSlice = createSlice({
     name: 'tasks',
-    initialState: getTasksFromLocalStorage(),
+    initialState: {
+        tasks: getTasksFromLocalStorage(),
+        hideDone: false,
+    },
     reducers: {
         addTask: ({ tasks }, { payload }) => {
             tasks.push(payload);
