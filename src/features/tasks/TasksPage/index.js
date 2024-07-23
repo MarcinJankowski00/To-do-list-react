@@ -1,11 +1,13 @@
 import React from 'react';
 import Form from './Form';
+import Search from './Search';
 import List from './List';
 import Buttons from './Buttons';
-import Section from '../../common/Section';
-import Container from '../../common/Container';
+import Section from '../../../common/Section';
+import Container from '../../../common/Container';
 
-function Tasks() {
+function TasksPage() {
+
   return (
     <Container>
       <header>
@@ -16,12 +18,16 @@ function Tasks() {
         content={<Form />}
       />
       <Section
+        title="Wyszukiwarka"
+        content={<Search />}
+      />
+      <Section
         title="Lista zadań"
         content={<List />}
-        extraElementContent={<Buttons/>}
+        extraElementContent={<Buttons />}
       />
     </Container>
   );
 }
 
-export default Tasks;
+export default TasksPage;
