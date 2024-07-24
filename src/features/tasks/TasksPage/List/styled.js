@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { css } from "styled-components";
 
 export const Tasks = styled.ul`
@@ -49,4 +50,10 @@ export const Button = styled.button`
     &:active {
         filter: brightness(120%);
     }
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    outline: none;
+    color: teal;
 `;

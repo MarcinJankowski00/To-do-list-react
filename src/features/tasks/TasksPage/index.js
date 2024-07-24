@@ -5,6 +5,7 @@ import List from './List';
 import Buttons from './Buttons';
 import Section from '../../../common/Section';
 import Container from '../../../common/Container';
+import DownloadButton from './DownloadButton';
 
 function TasksPage() {
 
@@ -16,6 +17,7 @@ function TasksPage() {
       <Section
         title="Dodaj nowe zadanie"
         content={<Form />}
+        extraElementContent={<DownloadButton />}
       />
       <Section
         title="Wyszukiwarka"

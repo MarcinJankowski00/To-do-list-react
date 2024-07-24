@@ -1,18 +1,19 @@
 import React from "react";
-import { BrowserRouter, NavLink, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import TaskPage from "./features/tasks/TaskPage"
 import TasksPage from "./features/tasks/TasksPage"
 import AuthorPage from "./features/author/AuthorPage"
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { List, Nav, StyledNavLink } from "./styled";
 
 export default () => (
     <BrowserRouter basename="/To-do-list-react">
-        <nav>
-            <ul>
-                <li><NavLink activeClassName="active" to="/zadania">Zadania</NavLink></li>
-                <li><NavLink activeClassName="active" to="/author">O autorze</NavLink></li>
-            </ul>
-        </nav>
+        <Nav>
+            <List>
+                <li><StyledNavLink to="/zadania">Zadania</StyledNavLink></li>
+                <li><StyledNavLink to="/author">O autorze</StyledNavLink></li>
+            </List>
+        </Nav>
         <Switch>
             <Route path="/zadania/:id">
                 <TaskPage />

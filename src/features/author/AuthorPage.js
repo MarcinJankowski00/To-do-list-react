@@ -9,7 +9,7 @@ function AuthorPage() {
                 <h1>O autorze</h1>
             </header>
             <Section
-                title="O autorze"
+                title="Marcin Jankowski"
                 content={
                     <a>
                         nanana

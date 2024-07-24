@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         display: grid;
         grid-template-columns: 1fr;
@@ -13,7 +13,11 @@ export const Button = styled.button`
     border: none;
     color: ${({ theme }) => theme.color.teal};
     cursor: pointer;
-    transition: 0.5s;
+
+    &:disabled {
+        color: ${({ theme }) => theme.color.silver};
+        cursor: default;
+    }
 
     &:hover {
         filter: brightness(110%);
@@ -21,10 +25,5 @@ export const Button = styled.button`
 
     &:active {
         filter: brightness(120%);
-    }
-
-    &:disabled {
-        color: ${({ theme }) => theme.color.silver};
-        cursor: default;
     }
 `;
