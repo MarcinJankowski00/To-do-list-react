@@ -1,33 +1,29 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 import TaskPage from "./features/tasks/TaskPage"
 import TasksPage from "./features/tasks/TasksPage"
 import AuthorPage from "./features/author/AuthorPage"
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
-import { List, Nav, StyledNavLink } from "./styled";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { toAuthor, toTask, toTasks } from "./routes";
+import Navigation from "./Navigation";
 
-export default () => (
+const App = () => (
     <BrowserRouter basename="/To-do-list-react">
-        <Nav>
-            <List>
-                <li><StyledNavLink to="/zadania">Zadania</StyledNavLink></li>
-                <li><StyledNavLink to="/author">O autorze</StyledNavLink></li>
-            </List>
-        </Nav>
+        <Navigation />
         <Switch>
-            <Route path="/zadania/:id">
+            <Route path={toTask()}>
                 <TaskPage />
             </Route>
-            <Route path="/zadania">
+            <Route path={toTasks()}>
                 <TasksPage />
             </Route>
-            <Route path="/author">
+            <Route path={toAuthor()}>
                 <AuthorPage />
             </Route>
             <Route path="/">
-                <Redirect to="/zadania" />
+                <Redirect to={toTasks()} />
             </Route>
         </Switch>
     </BrowserRouter>
+);
 
-)
+export default App;

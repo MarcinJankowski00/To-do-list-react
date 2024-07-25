@@ -3,6 +3,7 @@ import { Tasks, Item, Content, Button, StyledLink } from "./styled";
 import { toggleTaskDone, removeTask, selectTasksByQuery, selectHideDone } from "../../tasksSlice";
 import { useQueryParameter } from "../queryParameters";
 import { searchQueryParamName } from "../searchQueryParamName";
+import { toTask } from "../../../../routes";
 
 const List = () => {
     const query = useQueryParameter(searchQueryParamName);
@@ -17,16 +18,16 @@ const List = () => {
                     hidden={hideDone && task.done}
                 >
                     <Button
-                        toggleDone
+                        toggledone="true"
                         onClick={() => dispatch(toggleTaskDone(task.id))}
                     >
                         {task.done ? "✔" : ""}
                     </Button>
-                    <Content done={task.done}>
-                        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
+                    <Content done={task.done ? "true" : "false"}>
+                        <StyledLink to={toTask({ id: task.id })}>{task.content}</StyledLink>
                     </Content>
                     <Button
-                        remove
+                        remove="true"
                         onClick={() => dispatch(removeTask(task.id))}
                     >
                         🗑
