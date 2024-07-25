@@ -23,7 +23,7 @@ const List = () => {
                     >
                         {task.done ? "✔" : ""}
                     </Button>
-                    <Content done={task.done ? "true" : "false"}>
+                    <Content done={task.done ? "true" : undefined}>
                         <StyledLink to={toTask({ id: task.id })}>{task.content}</StyledLink>
                     </Content>
                     <Button
