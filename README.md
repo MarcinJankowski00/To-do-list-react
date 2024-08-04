@@ -3,12 +3,16 @@
 ## Demo
 https://marcinjankowski00.github.io/To-do-list-react/
 
-![Website preview](https://raw.githubusercontent.com/MarcinJankowski00/Tasks-list/main/images/preview.png)
+![Website preview](https://raw.githubusercontent.com/MarcinJankowski00/To-do-list-react/main/public/first_preview.png)
+
+![Website preview](https://raw.githubusercontent.com/MarcinJankowski00/To-do-list-react/main/public/second_preview.png)
 
 ## Description
-A website where you can make a to-do list. On the page you can mark completed tasks and delete them. The website is in Polish.
+
+A website where you can create a to-do list. You can add tasks, mark them as completed, and delete them. Additionally, you can mark all tasks as completed with one button. You can hide completed tasks. You can download sample tasks. The website also has a subpage with information about the author. The website includes a search feature that filters all tasks and displays the searched tasks. The site is in Polish.
 
 ## Instruction
+
 To add a task, enter the content in the empty field, and then press the blue button on which it says "Dodaj zadanie".
 
 To mark a completed task, press the green square button to the left of the task.
@@ -21,15 +25,24 @@ To hide all marked tasks, press "Ukryj ukończone".
 
 To show all hidden tasks, press "Pokaż ukończone".
 
+To download sample tasks, click the "Pobierz przykładowe zadania" button.
+
+To switch to the "About the Author" subpage, click the "O Autorze" button in the navigation.
+
+To search for a task, enter the desired task in the box under the "Wyszukiwarka" label.
+
 ## Included technologies and conventions:
+
 - JavaScript
 - CSS
 - HTML
 - Grid
 - NormalizeCSS
 - CamelCase naming convention
-- BEM naming convention
 - React
+- React Router
+- Redux
+- Saga
 
 ## Available Scripts
 
