@@ -2,8 +2,8 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled, { css } from "styled-components";
 
 export const Tasks = styled.ul`
-list-style: none;
-padding-inline-start: 0;
+    list-style: none;
+    padding-inline-start: 0;
 `;
 
 export const Item = styled.li`
