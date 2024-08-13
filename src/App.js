@@ -7,7 +7,7 @@ import { toAuthor, toTask, toTasks } from "./routes";
 import Navigation from "./Navigation";
 
 const App = () => (
-    <HashRouter basename="/To-do-list-react">
+    <HashRouter>
         <Navigation />
         <Switch>
             <Route path={toTask()}>
